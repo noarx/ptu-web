@@ -222,6 +222,4 @@ export class pokemon {
         this.egg_group2 = egg_group2;
         this.hatch_rate = hatch_rate
     }
-
-
 }
