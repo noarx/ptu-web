@@ -1,4 +1,4 @@
-class pokemon {
+export class pokemon {
     pkmn_name: string;
     hp: number;
     atk: number;
