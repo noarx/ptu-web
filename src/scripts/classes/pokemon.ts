@@ -1,4 +1,4 @@
-export class pokemon {
+export class Pokemon {
     private pkmn_name: string;
     private hp: number;
     private atk: number;
@@ -7,20 +7,20 @@ export class pokemon {
     private sp_def: number;
     private speed: number;
     private type1: string;
-    private type2: string;
+    private type2: string | null;
     private basic_ability1: string;
-    private basic_ability2: string;
-    private adv_ability1: string;
-    private adv_ability2: string;
-    private high_ability: string;
-    private evo_name: string;
-    private evo_level: number;
+    private basic_ability2: string | null;
+    private adv_ability1: string | null;
+    private adv_ability2: string | null;
+    private high_ability: string | null;
+    private evo_name: string | null;
+    private evo_level: number | null;
     private height: number; // meters
     private weight: number; // kilograms
-    private gender_ratio: number; // Percent Male (out of 100) - NULL indicates genderless 'mon
-    private egg_group1: string;
-    private egg_group2: string;
-    private hatch_rate: number;
+    private gender_ratio: number | null; // Percent Male (out of 100) - null indicates genderless 'mon
+    private egg_group1: string | null;
+    private egg_group2: string | null;
+    private hatch_rate: number | null;
 
     public getPkmn_name(): string {
         return this.pkmn_name;
@@ -86,11 +86,11 @@ export class pokemon {
         this.type1 = type1;
     }
 
-    public getType2(): string {
+    public getType2(): string | null {
         return this.type2;
     }
 
-    public setType2(type2: string): void {
+    public setType2(type2: string | null): void {
         this.type2 = type2;
     }
 
@@ -102,51 +102,51 @@ export class pokemon {
         this.basic_ability1 = basic_ability1;
     }
 
-    public getBasic_ability2(): string {
+    public getBasic_ability2(): string | null {
         return this.basic_ability2;
     }
 
-    public setBasic_ability2(basic_ability2: string): void {
+    public setBasic_ability2(basic_ability2: string | null): void {
         this.basic_ability2 = basic_ability2;
     }
 
-    public getAdv_ability1(): string {
+    public getAdv_ability1(): string | null {
         return this.adv_ability1;
     }
 
-    public setAdv_ability1(adv_ability1: string): void {
+    public setAdv_ability1(adv_ability1: string | null): void {
         this.adv_ability1 = adv_ability1;
     }
 
-    public getAdv_ability2(): string {
+    public getAdv_ability2(): string | null {
         return this.adv_ability2;
     }
 
-    public setAdv_ability2(adv_ability2: string): void {
+    public setAdv_ability2(adv_ability2: string | null): void {
         this.adv_ability2 = adv_ability2;
     }
 
-    public getHigh_ability(): string {
+    public getHigh_ability(): string | null {
         return this.high_ability;
     }
 
-    public setHigh_ability(high_ability: string): void {
+    public setHigh_ability(high_ability: string | null): void {
         this.high_ability = high_ability;
     }
 
-    public getEvo_name(): string {
+    public getEvo_name(): string | null {
         return this.evo_name;
     }
 
-    public setEvo_name(evo_name: string): void {
+    public setEvo_name(evo_name: string | null): void {
         this.evo_name = evo_name;
     }
 
-    public getEvo_level(): number {
+    public getEvo_level(): number | null {
         return this.evo_level;
     }
 
-    public setEvo_level(evo_level: number): void {
+    public setEvo_level(evo_level: number | null): void {
         this.evo_level = evo_level;
     }
 
@@ -166,35 +166,35 @@ export class pokemon {
         this.weight = weight;
     }
 
-    public getGender_ratio(): number {
+    public getGender_ratio(): number | null {
         return this.gender_ratio;
     }
 
-    public setGender_ratio(gender_ratio: number): void {
+    public setGender_ratio(gender_ratio: number | null): void {
         this.gender_ratio = gender_ratio;
     }
 
-    public getEgg_group1(): string {
+    public getEgg_group1(): string | null {
         return this.egg_group1;
     }
 
-    public setEgg_group1(egg_group1: string): void {
+    public setEgg_group1(egg_group1: string | null): void {
         this.egg_group1 = egg_group1;
     }
 
-    public getEgg_group2(): string {
+    public getEgg_group2(): string | null {
         return this.egg_group2;
     }
 
-    public setEgg_group2(egg_group2: string): void {
+    public setEgg_group2(egg_group2: string | null): void {
         this.egg_group2 = egg_group2;
     }
 
-    public getHatch_rate(): number {
+    public getHatch_rate(): number | null {
         return this.hatch_rate;
     }
 
-    public setHatch_rate(hatch_rate: number): void {
+    public setHatch_rate(hatch_rate: number | null): void {
         this.hatch_rate = hatch_rate;
     }
 
