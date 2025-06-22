@@ -23,7 +23,6 @@ type PokemonOptions = {
     hatch_rate: number | null;
 }
 
-
 export class Pokemon {
     // Constructor
     private opts: PokemonOptions;

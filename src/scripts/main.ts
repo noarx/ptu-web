@@ -28,3 +28,13 @@ const missingno = new Pokemon({
     egg_group2: null, 
     hatch_rate: null
 });
+
+function displayPokemon(pokemon: Pokemon) {
+    document.querySelector<HTMLDivElement>('#pokemonBox')!.innerHTML = `
+        <div>
+            <h1>Display Test</h1>
+        </div>
+    `
+};
+
+displayPokemon(missingno);
