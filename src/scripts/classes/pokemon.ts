@@ -1,225 +1,212 @@
+type PokemonOptions = {
+    pkmn_name: string;
+    hp: number;
+    atk: number;
+    def: number;
+    sp_atk: number;
+    sp_def: number;
+    speed: number;
+    type1: string;
+    type2: string | null;
+    basic_ability1: string;
+    basic_ability2: string | null;
+    adv_ability1: string | null;
+    adv_ability2: string | null;
+    high_ability: string | null;
+    evo_name: string | null;
+    evo_level: number | null;
+    height: number; // meters
+    weight: number; // kilograms
+    gender_ratio: number | null; // Percent Male (out of 100) - null indicates genderless 'mon
+    egg_group1: string | null;
+    egg_group2: string | null;
+    hatch_rate: number | null;
+}
+
+
 export class Pokemon {
-    private pkmn_name: string;
-    private hp: number;
-    private atk: number;
-    private def: number;
-    private sp_atk: number;
-    private sp_def: number;
-    private speed: number;
-    private type1: string;
-    private type2: string | null;
-    private basic_ability1: string;
-    private basic_ability2: string | null;
-    private adv_ability1: string | null;
-    private adv_ability2: string | null;
-    private high_ability: string | null;
-    private evo_name: string | null;
-    private evo_level: number | null;
-    private height: number; // meters
-    private weight: number; // kilograms
-    private gender_ratio: number | null; // Percent Male (out of 100) - null indicates genderless 'mon
-    private egg_group1: string | null;
-    private egg_group2: string | null;
-    private hatch_rate: number | null;
+    // Constructor
+    private opts: PokemonOptions;
+    
+    constructor(options: PokemonOptions) {
+        this.opts = options;
+    }
+
+    // Access Methods
 
     public getPkmn_name(): string {
-        return this.pkmn_name;
+        return this.opts.pkmn_name;
     }
 
     public setPkmn_name(pkmn_name: string): void {
-        this.pkmn_name = pkmn_name;
+        this.opts.pkmn_name = pkmn_name;
     }
 
     public getHp(): number {
-        return this.hp;
+        return this.opts.hp;
     }
 
     public setHp(hp: number): void {
-        this.hp = hp;
+        this.opts.hp = hp;
     }
 
     public getAtk(): number {
-        return this.atk;
+        return this.opts.atk;
     }
 
     public setAtk(atk: number): void {
-        this.atk = atk;
+        this.opts.atk = atk;
     }
 
     public getDef(): number {
-        return this.def;
+        return this.opts.def;
     }
 
     public setDef(def: number): void {
-        this.def = def;
+        this.opts.def = def;
     }
 
     public getSp_atk(): number {
-        return this.sp_atk;
+        return this.opts.sp_atk;
     }
 
     public setSp_atk(sp_atk: number): void {
-        this.sp_atk = sp_atk;
+        this.opts.sp_atk = sp_atk;
     }
 
     public getSp_def(): number {
-        return this.sp_def;
+        return this.opts.sp_def;
     }
 
     public setSp_def(sp_def: number): void {
-        this.sp_def = sp_def;
+        this.opts.sp_def = sp_def;
     }
 
     public getSpeed(): number {
-        return this.speed;
+        return this.opts.speed;
     }
 
     public setSpeed(speed: number): void {
-        this.speed = speed;
+        this.opts.speed = speed;
     }
 
-    public getType1(): string {
-        return this.type1;
+    public getPrimaryType(): string {
+        return this.opts.type1;
     }
 
-    public setType1(type1: string): void {
-        this.type1 = type1;
+    public setPrimaryType(type1: string): void {
+        this.opts.type1 = type1;
     }
 
-    public getType2(): string | null {
-        return this.type2;
+    public getSecondaryType(): string | null {
+        return this.opts.type2;
     }
 
-    public setType2(type2: string | null): void {
-        this.type2 = type2;
+    public setSecondaryType(type2: string | null): void {
+        this.opts.type2 = type2;
     }
 
     public getBasic_ability1(): string {
-        return this.basic_ability1;
+        return this.opts.basic_ability1;
     }
 
     public setBasic_ability1(basic_ability1: string): void {
-        this.basic_ability1 = basic_ability1;
+        this.opts.basic_ability1 = basic_ability1;
     }
 
     public getBasic_ability2(): string | null {
-        return this.basic_ability2;
+        return this.opts.basic_ability2;
     }
 
     public setBasic_ability2(basic_ability2: string | null): void {
-        this.basic_ability2 = basic_ability2;
+        this.opts.basic_ability2 = basic_ability2;
     }
 
     public getAdv_ability1(): string | null {
-        return this.adv_ability1;
+        return this.opts.adv_ability1;
     }
 
     public setAdv_ability1(adv_ability1: string | null): void {
-        this.adv_ability1 = adv_ability1;
+        this.opts.adv_ability1 = adv_ability1;
     }
 
     public getAdv_ability2(): string | null {
-        return this.adv_ability2;
+        return this.opts.adv_ability2;
     }
 
     public setAdv_ability2(adv_ability2: string | null): void {
-        this.adv_ability2 = adv_ability2;
+        this.opts.adv_ability2 = adv_ability2;
     }
 
     public getHigh_ability(): string | null {
-        return this.high_ability;
+        return this.opts.high_ability;
     }
 
     public setHigh_ability(high_ability: string | null): void {
-        this.high_ability = high_ability;
+        this.opts.high_ability = high_ability;
     }
 
     public getEvo_name(): string | null {
-        return this.evo_name;
+        return this.opts.evo_name;
     }
 
     public setEvo_name(evo_name: string | null): void {
-        this.evo_name = evo_name;
+        this.opts.evo_name = evo_name;
     }
 
     public getEvo_level(): number | null {
-        return this.evo_level;
+        return this.opts.evo_level;
     }
 
     public setEvo_level(evo_level: number | null): void {
-        this.evo_level = evo_level;
+        this.opts.evo_level = evo_level;
     }
 
     public getHeight(): number {
-        return this.height;
+        return this.opts.height;
     }
 
     public setHeight(height: number): void {
-        this.height = height;
+        this.opts.height = height;
     }
 
     public getWeight(): number {
-        return this.weight;
+        return this.opts.weight;
     }
 
     public setWeight(weight: number): void {
-        this.weight = weight;
+        this.opts.weight = weight;
     }
 
     public getGender_ratio(): number | null {
-        return this.gender_ratio;
+        return this.opts.gender_ratio;
     }
 
     public setGender_ratio(gender_ratio: number | null): void {
-        this.gender_ratio = gender_ratio;
+        this.opts.gender_ratio = gender_ratio;
     }
 
     public getEgg_group1(): string | null {
-        return this.egg_group1;
+        return this.opts.egg_group1;
     }
 
     public setEgg_group1(egg_group1: string | null): void {
-        this.egg_group1 = egg_group1;
+        this.opts.egg_group1 = egg_group1;
     }
 
     public getEgg_group2(): string | null {
-        return this.egg_group2;
+        return this.opts.egg_group2;
     }
 
     public setEgg_group2(egg_group2: string | null): void {
-        this.egg_group2 = egg_group2;
+        this.opts.egg_group2 = egg_group2;
     }
 
     public getHatch_rate(): number | null {
-        return this.hatch_rate;
+        return this.opts.hatch_rate;
     }
 
     public setHatch_rate(hatch_rate: number | null): void {
-        this.hatch_rate = hatch_rate;
-    }
-
-    constructor(pkmn_name: string, hp: number, atk: number, def: number, sp_atk: number, sp_def: number, speed: number, type1: string, type2: string, basic_ability1: string, basic_ability2: string, adv_ability1: string, adv_ability2: string, high_ability: string, evo_name: string, evo_level: number, height: number, weight: number, gender_ratio: number, egg_group1: string, egg_group2: string, hatch_rate: number,) {
-        this.pkmn_name = pkmn_name;
-        this.hp = hp;
-        this.atk = atk;
-        this.def = def;
-        this.sp_atk = sp_atk;
-        this.sp_def = sp_def;
-        this.speed = speed;
-        this.type1 = type1;
-        this.type2 = type2;
-        this.basic_ability1 = basic_ability1;
-        this.basic_ability2 = basic_ability2;
-        this.adv_ability1 = adv_ability1;
-        this.adv_ability2 = adv_ability2;
-        this.high_ability = high_ability;
-        this.evo_name = evo_name
-        this.evo_level = evo_level
-        this.height = height;
-        this.weight = weight
-        this.gender_ratio = gender_ratio;
-        this.egg_group1 = egg_group1;
-        this.egg_group2 = egg_group2;
-        this.hatch_rate = hatch_rate
+        this.opts.hatch_rate = hatch_rate;
     }
 }
