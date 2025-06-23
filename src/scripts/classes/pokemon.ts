@@ -6,6 +6,7 @@ type PokemonOptions = {
     sp_atk: number;
     sp_def: number;
     speed: number;
+    nature: string | null;
     type1: string;
     type2: string | null;
     basic_ability1: string;
@@ -32,7 +33,6 @@ export class Pokemon {
     }
 
     // Access Methods
-
     public getPkmn_name(): string {
         return this.opts.pkmn_name;
     }
@@ -87,6 +87,14 @@ export class Pokemon {
 
     public setSpeed(speed: number): void {
         this.opts.speed = speed;
+    }
+
+    public getNature(): string | null {
+        return this.opts.nature;
+    }
+
+    public setNature(nature: string | null): void {
+        this.opts.nature = nature;
     }
 
     public getPrimaryType(): string {

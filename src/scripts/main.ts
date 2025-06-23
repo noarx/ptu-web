@@ -12,6 +12,7 @@ const missingno = new Pokemon({
     sp_atk: 4,
     sp_def: 5,
     speed: 6,
+    nature: "jolly",
     type1: "normal",
     type2: null,
     basic_ability1: "test ability 1",
