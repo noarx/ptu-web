@@ -5,7 +5,7 @@ import { Pokemon } from "./classes/pokemon";
 // Test Pokemon Object Implementation
 
 const missingno = new Pokemon({
-    pkmn_name: "missingno",
+    pkmn_name: "Missingno",
     hp: 1,
     atk: 2,
     def: 3,
@@ -30,10 +30,28 @@ const missingno = new Pokemon({
 });
 
 function displayPokemon(pokemon: Pokemon) {
+    let prettyTypeString: string;
+
+    if (pokemon.getSecondaryType() != null) {
+        prettyTypeString = pokemon.getPrimaryType() + '/' + pokemon.getSecondaryType();
+    } else {
+        prettyTypeString = pokemon.getPrimaryType();
+    };
+
     document.querySelector<HTMLDivElement>('#pokemonBox')!.innerHTML = `
-        <div>
-            <h1>Display Test</h1>
-        </div>
+
+        <h2>${pokemon.getPkmn_name()}</h2>
+
+        <ul class="framed buttons">
+            <li>HP: ${pokemon.getHp()}</li>
+            <li>ATK: ${pokemon.getAtk()}</li>
+            <li>DEF: ${pokemon.getDef()}</li>
+            <li>Sp. ATK: ${pokemon.getSp_atk()}</li>
+            <li>Sp. DEF: ${pokemon.getSp_def()}</li>
+            <li>SPD: ${pokemon.getSpeed()}</li>
+        </ul>
+
+        <h3>Type: ${prettyTypeString}</h3>
     `
 };
 
