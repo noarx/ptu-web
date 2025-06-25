@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+.flex-container {
+    display: flex;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.flex-item {
+    margin: 5px;
+    padding: 5px;
+    background-color: lightcoral;
+}
